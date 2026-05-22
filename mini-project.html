@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Модуль 2. Міні-проєкт</title>
+    <meta
+      name="description"
+      content="Міні-проєкт цифрового уроку математики для 10-11 класів: дидактичний дизайн, Desmos-модель, SWOT-аналіз і ШІ-підказки."
+    >
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="На головну">
+        <span class="brand-mark">∑</span>
+        <span>Цифрове портфоліо</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span class="sr-only">Меню</span>
+      </button>
+      <nav class="site-nav" id="site-nav" aria-label="Головна навігація">
+        <a href="index.html">Головна</a>
+        <a href="module1.html">Модуль 1</a>
+        <a class="active" href="module2.html">Модуль 2</a>
+        <a href="module3.html">Модуль 3</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <div>
+          <p class="eyebrow">Модуль 2 · підсторінка</p>
+          <h1>Міні-проєкт цифрового уроку</h1>
+          <p class="lead">
+            Міні-проєкт цифрового уроку для 10-11 класів на тему
+            «Застосування похідної до дослідження функцій». Основна ідея:
+            учень не лише виконує алгоритм, а досліджує зв'язок між знаком
+            похідної, монотонністю та екстремумами через динамічну модель.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#interactive-graph">Інтерактивний графік</a>
+            <a class="button secondary" href="module2.html">Повернутися до Модуля 2</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-head">
+          <p class="eyebrow">Етап 1</p>
+          <h2>Тематичне планування та стратегія</h2>
+          <p>
+            Для міні-проєкту обрано тему з алгебри і початків аналізу, де
+            технологія справді допомагає побачити математичну ідею, а не просто
+            оформити відповідь.
+          </p>
+        </div>
+        <div class="card-grid three">
+          <article class="card">
+            <span class="card-kicker">Тема</span>
+            <h3>Дослідження функції</h3>
+            <p>
+              10-11 класи: застосування похідної для визначення проміжків
+              зростання, спадання та локальних екстремумів функції.
+            </p>
+          </article>
+          <article class="card">
+            <span class="card-kicker">Технологія</span>
+            <h3>Дослідницьке навчання</h3>
+            <p>
+              Учень спочатку спостерігає зміну нахилу дотичної, формулює
+              гіпотезу, а потім перевіряє її аналітично через похідну.
+            </p>
+          </article>
+          <article class="card">
+            <span class="card-kicker">Інструмент</span>
+            <h3>Desmos</h3>
+            <p>
+              Для теми зручно використовувати графічний калькулятор Desmos.
+              На сайті додано локальну модель, яка відтворює ключову дію:
+              зміну точки на графіку та аналіз нахилу.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="desmos-task">
+        <div class="split">
+          <article class="long-read">
+            <p class="eyebrow">Етап 2 · Desmos</p>
+            <h2>Побудова моделі у графічному калькуляторі</h2>
+            <p>
+              Учень відкриває Desmos, будує графік функції та її похідної,
+              порівнює нулі похідної з точками зміни поведінки функції і робить
+              висновок про проміжки зростання, спадання та локальні екстремуми.
+            </p>
+            <div class="formula-list" aria-label="Формули для введення у Desmos">
+              <code>y = x^3 - 3x^2 + 2</code>
+              <code>f'(x) = 3x^2 - 6x</code>
+            </div>
+            <a class="button secondary" href="https://www.desmos.com/calculator/smdha2zekp" target="_blank" rel="noreferrer">Відкрити модель у Desmos</a>
+          </article>
+          <article class="rubric">
+            <h3>Що має встановити учень</h3>
+            <ul class="plain-list">
+              <li>Нулі похідної: x = 0 та x = 2.</li>
+              <li>На проміжку (-∞; 0) функція зростає.</li>
+              <li>На проміжку (0; 2) функція спадає.</li>
+              <li>На проміжку (2; +∞) функція зростає.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="band" id="interactive-graph">
+        <div class="interactive-layout">
+          <div>
+            <p class="eyebrow">Етап 2 · Динамічна модель</p>
+            <h2>Знак похідної і поведінка функції</h2>
+            <p>
+              Модель показує графік функції y = x³ - 3x² + 2, дотичну в обраній
+              точці та значення похідної. Учень змінює положення точки x₀ і
+              спостерігає, коли функція зростає, спадає або має горизонтальну
+              дотичну.
+            </p>
+            <div class="model-stats" aria-live="polite">
+              <span>x₀ = <strong id="x-value">1.00</strong></span>
+              <span>f'(x₀) = <strong id="d-value">-3.00</strong></span>
+              <span id="trend-value">функція спадає</span>
+            </div>
+            <label class="range-label" for="point-slider">Положення точки x₀</label>
+            <input id="point-slider" type="range" min="-1" max="4" step="0.05" value="1">
+          </div>
+          <div class="canvas-panel">
+            <canvas id="derivative-canvas" width="720" height="460" aria-label="Інтерактивний графік функції"></canvas>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="swot">
+        <div class="section-head">
+          <p class="eyebrow">Етап 2 · SWOT</p>
+          <h2>Експертиза цифрового інструментарію</h2>
+          <p>
+            SWOT-аналіз виконано для використання Desmos у темі «Застосування
+            похідної до дослідження функцій».
+          </p>
+        </div>
+        <div class="swot-grid">
+          <article>
+            <h3>Strengths</h3>
+            <p>
+              Наочно показує графік, дотичну та зміну нахилу; підтримує швидку
+              перевірку гіпотез і робить абстрактний зміст похідної видимим.
+            </p>
+          </article>
+          <article>
+            <h3>Weaknesses</h3>
+            <p>
+              Без методичних запитань учень може рухати повзунок механічно й
+              не переходити від візуального спостереження до аналітичного доказу.
+            </p>
+          </article>
+          <article>
+            <h3>Opportunities</h3>
+            <p>
+              Модель можна використати для дистанційної роботи, підготовки до
+              НМТ, коротких дослідницьких звітів і порівняння різних функцій.
+            </p>
+          </article>
+          <article>
+            <h3>Threats</h3>
+            <p>
+              Є ризик списування готового скриншота, технічних труднощів на
+              слабких пристроях і перевантаження, якщо додати забагато параметрів.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="band">
+        <div class="section-head">
+          <p class="eyebrow">Етап 3</p>
+          <h2>Сценарне планування уроку</h2>
+        </div>
+        <div class="split">
+          <article class="long-read">
+            <h3>Навчальна ситуація</h3>
+            <p>
+              Учень досліджує функцію y = x³ - 3x² + 2. За допомогою моделі він
+              знаходить точки, де дотична стає горизонтальною, висуває припущення
+              про локальний максимум і мінімум, а потім перевіряє результат через
+              обчислення f'(x).
+            </p>
+            <h3>Очікуваний продукт</h3>
+            <p>
+              Результатом є короткий звіт: скриншот або посилання на модель,
+              критичні точки, таблиця знаків похідної, проміжки зростання і
+              спадання та письмовий висновок про екстремуми.
+            </p>
+          </article>
+          <article class="rubric">
+            <h3>Критерії оцінювання</h3>
+            <ul class="plain-list">
+              <li><strong>Модель:</strong> коректно знайдено точки з горизонтальною дотичною.</li>
+              <li><strong>Обчислення:</strong> правильно отримано f'(x)=3x²-6x.</li>
+              <li><strong>Аналіз:</strong> визначено знак похідної на проміжках.</li>
+              <li><strong>Пояснення:</strong> висновок пов'язує графік, похідну і поведінку функції.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="ai-assistant">
+        <div class="section-head">
+          <p class="eyebrow">Етап 4</p>
+          <h2>ШІ-асистент: підказки, помилка і прогноз</h2>
+          <p>
+            ШІ використовується не для готової відповіді, а як джерело
+            диференційованих підказок і матеріалу для обговорення типових помилок.
+          </p>
+        </div>
+        <div class="card-grid three">
+          <article class="card">
+            <span class="card-kicker">Рівень 1</span>
+            <h3>Легка підказка</h3>
+            <p>
+              Подивись на дотичну: у яких точках вона стає горизонтальною?
+              Що в цей момент відбувається зі зростанням або спаданням графіка?
+            </p>
+          </article>
+          <article class="card">
+            <span class="card-kicker">Рівень 2</span>
+            <h3>Середня підказка</h3>
+            <p>
+              Обчисли похідну функції, прирівняй її до нуля і порівняй отримані
+              значення x з точками, які ти побачив на моделі.
+            </p>
+          </article>
+          <article class="card">
+            <span class="card-kicker">Рівень 3</span>
+            <h3>Сильна підказка</h3>
+            <p>
+              Для f(x)=x³-3x²+2 маємо f'(x)=3x²-6x=3x(x-2), тому критичні
+              точки: x=0 і x=2. Далі перевір знак похідної на трьох проміжках.
+            </p>
+          </article>
+        </div>
+        <div class="split top-gap">
+          <article class="warning-note">
+            <h3>Типова помилкова логіка</h3>
+            <p>
+              Учень бачить найвищу точку на видимому фрагменті графіка і робить
+              висновок про максимум лише за картинкою. Помилка в тому, що треба
+              аналізувати знак похідної, а не тільки візуальне враження від масштабу.
+            </p>
+          </article>
+          <article class="success-note">
+            <h3>Прогноз</h3>
+            <p>
+              Реальний учень зможе дійти до правильної відповіді, якщо модель
+              поєднати з таблицею спостережень і вимогою пояснити результат
+              словами та формулами.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="comparison-band">
+        <div>
+          <p class="eyebrow">Висновок</p>
+          <h2>Без технології / з технологією</h2>
+        </div>
+        <div class="comparison-grid">
+          <div>
+            <h3>Без технології</h3>
+            <p>
+              Учень здебільшого виконує алгоритм за зразком і може не побачити,
+              чому саме знак похідної описує поведінку функції.
+            </p>
+          </div>
+          <div>
+            <h3>З технологією</h3>
+            <p>
+              Учень спочатку бачить зміну нахилу, формулює гіпотезу, а потім
+              підтверджує її обчисленнями. Технологія стає опорою для мислення.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>© 2026 Хом'як Віталій · Цифровий простір учителя математики</p>
+      <p><a href="module2.html">До Модуля 2</a> · <a href="index.html">На головну</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
