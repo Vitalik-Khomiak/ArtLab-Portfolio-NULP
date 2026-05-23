@@ -609,6 +609,14 @@ blockquote {
   background: #bf806e;
 }
 
+.certificate-pdf {
+  display: block;
+  width: 100%;
+  height: min(72vw, 760px);
+  border: 1px solid var(--line);
+  background: #fff;
+}
+
 .reflection {
   padding-top: 12px;
   border-top: 1px solid var(--line);
