@@ -601,14 +601,13 @@ blockquote {
   font-size: 14px;
 }
 
-.learning-screenshot-grid {
+.learning-screenshot-stack {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 16px;
+  gap: 22px;
   margin-top: 24px;
 }
 
-.learning-screenshot-grid .course-screenshot-block {
+.learning-screenshot-stack .course-screenshot-block {
   margin: 0;
 }
 
